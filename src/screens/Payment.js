@@ -62,7 +62,7 @@ const Payment = ({route, navigation}) => {
               style={styles.tinyLogo}
               source={require('../../assets/wallet.png')}
             />
-            <Text>{result[0].name}</Text>
+            <Text style={styles.blackText}>{result[0].name}</Text>
           </View>
           <Icon name="chevron-up" size={18} color="grey" />
         </View>
@@ -71,7 +71,7 @@ const Payment = ({route, navigation}) => {
             <View style={styles.rowWalletContent}>
               <View style={styles.circle}></View>
               <Image style={styles.brandLogo} source={item.uri} />
-              <Text>{item.name}</Text>
+              <Text style={styles.blackText}>{item.name}</Text>
             </View>
           );
         })}
@@ -83,7 +83,7 @@ const Payment = ({route, navigation}) => {
     return (
       <CustomCard>
         <View style={styles.rowWrapper}>
-          <Text>{result[0].name}</Text>
+          <Text style={styles.blackText}>{result[0].name}</Text>
           <Icon name="chevron-up" size={18} color="grey" />
         </View>
         {walletArray.map((item, index) => {
@@ -91,7 +91,7 @@ const Payment = ({route, navigation}) => {
             <View style={styles.rowWalletContent}>
               <View style={styles.circle}></View>
               <Image style={styles.brandLogo} source={item.uri} />
-              <Text>{item.name}</Text>
+              <Text style={styles.blackText}>{item.name}</Text>
             </View>
           );
         })}
@@ -103,7 +103,7 @@ const Payment = ({route, navigation}) => {
     return (
       <CustomCard customStyles={{height: 200}}>
         <View style={styles.rowWrapper}>
-          <Text>{result[0].name}</Text>
+          <Text style={styles.blackText}>{result[0].name}</Text>
           <Icon name="chevron-up" size={18} color="grey" />
         </View>
         <View style={{margin: 15}}>
@@ -146,7 +146,7 @@ const Payment = ({route, navigation}) => {
             <View style={styles.rowWalletContent}>
               <View style={styles.circle}></View>
               <Image style={styles.brandLogo} source={item.uri} />
-              <Text>{item.name}</Text>
+              <Text style={styles.blackText}>{item.name}</Text>
             </View>
           );
         })}
@@ -360,5 +360,8 @@ const styles = StyleSheet.create({
     color: '#000',
     fontSize: 16,
     fontWeight: '800',
+  },
+  blackText: {
+    color: '#000',
   },
 });

@@ -32,7 +32,7 @@ const CustomTabBar = ({data, selectedTabData, selectedTabIndex}) => {
                   },
                 ]}>
                 <TouchableOpacity onPress={() => renderTab(index)}>
-                  <Text style={{marginTop: 10}}>{item.name}</Text>
+                  <Text style={styles.tabBarTaxt}>{item.name}</Text>
                 </TouchableOpacity>
               </View>
             );
@@ -59,6 +59,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     minWidth: 130,
+  },
+  tabBarTaxt: {
+    marginTop: 10,
+    color: '#000',
   },
 });
 

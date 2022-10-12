@@ -101,11 +101,13 @@ const Entertainment = ({data, navigation, selectedTabData}) => {
               ) : (
                 <View style={[styles.footer]}>
                   <View style={styles.footerContentWrapper}>
-                    <Text>Image </Text>
-                    <Text>Content</Text>
+                    <Text style={styles.blackText}>Image </Text>
+                    <Text style={styles.blackText}>Content</Text>
                   </View>
                   <View style={styles.footerContentWrapper}>
-                    <Text style={styles.footerText}>View Details</Text>
+                    <Text style={[styles.footerText, styles.blackText]}>
+                      View Details
+                    </Text>
                   </View>
                 </View>
               )}
@@ -160,6 +162,9 @@ const styles = StyleSheet.create({
   },
   selectedBorderColor: {
     borderColor: '#blue',
+  },
+  blackText: {
+    color: '#000',
   },
 });
 
